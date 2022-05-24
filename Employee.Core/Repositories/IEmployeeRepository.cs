@@ -1,0 +1,8 @@
+using Employee.Core.Repositories.Base;
+
+namespace Employee.Core.Repositories;
+
+public interface IEmployeeRepository: IRepository < Employee.Core.Entities.Employee > {
+    //custom operations here
+    Task < IEnumerable < Employee.Core.Entities.Employee >> GetEmployeeByLastName(string lastname);
+}
